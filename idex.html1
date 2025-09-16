@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الخدمات | Jehfani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="jehfani_logo.png" alt="Jehfani Logo" height="50">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="services.html" class="active">الخدمات</a></li>
+        <li><a href="pricing.html">الأسعار</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services">
+    <h2>خدماتنا</h2>
+    <div class="service-list">
+      <div class="service-item">📢 إعلانات ممولة</div>
+      <div class="service-item">🎯 استهداف العملاء</div>
+      <div class="service-item">📊 إدارة الحملات التسويقية</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jehfani. جميع الحقوق محفوظة.</p>
+  </footer>
+</body>
+</html>
