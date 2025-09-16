@@ -1,111 +1,174 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-  <title>جهفاني
-    
-    — وكيل علاني</title>
-  <meta name="description" content="Jehfani - وكالة إعلانات تقدم خدمات تصميم، حملات ممولة، إدارة سوشال ميديا وإنتاج محتوى." />
+  <title>Jehfani — وكالة إعلانات رقمية</title>
+  <meta name="description" content="Jehfani - وكالة إعلانية متخصصة في الحملات الممولة، تصميم المحتوى، وإدارة السوشيال ميديا.">
+  <meta name="keywords" content="وكالة إعلانات, حملات ممولة, تسويق رقمي, إدارة سوشيال ميديا, Jehfani">
 
   <style>
     :root{
-      --blue:#0b63d8;
-      --dark:#14213d;
-      --muted:#6b7280;
+      --primary:#0d6efd;
+      --secondary:#6c757d;
+      --dark:#212529;
+      --light:#f8f9fa;
       --card:#ffffff;
-      --bg:#f7f9ff;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background:var(--bg);
-      color:var(--dark);
-      line-height:1.5;
-      direction: rtl;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;border-radius:8px}
+    header{
+      position:sticky;top:0;background:#fff;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);z-index:1000;
     }
-    .container{max-width:1000px;margin:28px auto;padding:20px;}
-    .brand{
-      display:flex;align-items:center;gap:14px;
-    }
-    .logo{
-      width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#3aa0ff);
-      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
-      box-shadow:0 6px 18px rgba(11,99,216,0.18);
-    }
-    header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
-    nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+    header .logo{font-weight:700;font-size:20px;color:var(--primary)}
+    nav a{margin:0 10px;color:var(--secondary);font-weight:500}
+    nav a:hover{color:var(--primary)}
     .hero{
-      background:linear-gradient(180deg, rgba(11,99,216,0.06), transparent);
-      padding:22px;border-radius:12px;margin-bottom:18px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+      padding:60px 20px;background:linear-gradient(120deg,var(--primary),#3aa0ff);color:white;
     }
-    .hero .info{flex:1;min-width:240px}
-    .hero h1{margin:0 0 6px;font-size:28px;color:var(--dark)}
-    .hero p{margin:0 0 12px;color:var(--muted)}
+    .hero .text{flex:1;min-width:260px;padding:10px}
+    .hero h1{font-size:36px;margin-bottom:12px}
+    .hero p{margin-bottom:18px;font-size:18px;color:#e6f0ff}
     .btn{
-      display:inline-block;background:var(--blue);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;
-      box-shadow:0 6px 16px rgba(11,99,216,0.15);
+      display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;transition:0.3s;
     }
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
-    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(20,33,61,0.06);}
-    .card h3{margin:0 0 8px;color:var(--blue);}
-    .card p{margin:0;color:var(--muted);}
-    footer{text-align:center;margin:32px 0 0;color:var(--muted);}
+    .btn-primary{background:white;color:var(--primary)}
+    .btn-primary:hover{background:#e6e6e6}
+    .section{padding:50px 20px}
+    .section h2{text-align:center;margin-bottom:30px;font-size:28px;color:var(--dark)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .card h3{margin-bottom:10px;color:var(--primary)}
+    .price-table table{width:100%;border-collapse:collapse}
+    .price-table th,.price-table td{padding:12px;border:1px solid #dee2e6;text-align:center}
+    .price-table th{background:#f1f5ff}
+    .testimonials .card{background:#f9fbff}
+    footer{
+      background:var(--dark);color:white;text-align:center;padding:20px;margin-top:40px
+    }
+    .social a{display:inline-block;margin:0 6px;width:40px;height:40px;border-radius:50%;background:white;color:var(--primary);
+      line-height:40px;text-align:center;font-weight:bold;transition:0.3s}
+    .social a:hover{background:var(--primary);color:white}
+    @media(max-width:768px){
+      .hero{flex-direction:column;text-align:center}
+      .hero .text{padding:0}
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">جفني</div>
-        <span style="font-weight:700;font-size:20px;">وكالة إعلانات</span>
+  <!-- Header -->
+  <header>
+    <div class="logo">Jehfani</div>
+    <nav>
+      <a href="#services">خدماتنا</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#clients">عملاؤنا</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="text">
+      <h1>وكالة Jehfani للإعلانات الرقمية</h1>
+      <p>نساعدك في الوصول إلى جمهورك عبر حملات ممولة، إدارة منصات التواصل، وتصميم محتوى جذاب.</p>
+      <a href="#contact" class="btn btn-primary">ابدأ الآن</a>
+    </div>
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=800&auto=format&fit=crop" alt="Digital marketing">
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <h2>خدماتنا</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>إعلانات ممولة</h3>
+        <p>إطلاق حملات ممولة على فيسبوك، إنستجرام وتيك توك مع استهداف ذكي.</p>
       </div>
-      <nav>
-        <a href="#services">الخدمات</a>
-        <a href="#contact">تواصل معنا</a>
-      </nav>
-    </header>
-    <section class="hero">
-      <div class="info">
-        <h1>وكالة جفني للإعلانات</h1>
-        <p>نساعدك على النجاح الرقمي عبر حملات إعلانية مدفوعة، إدارة حسابات السوشال ميديا، تصميم احترافي وإنتاج محتوى.</p>
-        <a class="btn" href="#contact">ابدأ الآن</a>
+      <div class="card">
+        <h3>إدارة سوشيال ميديا</h3>
+        <p>إدارة ونشر المحتوى، الرد على المتابعين، وتحليل الأداء شهريًا.</p>
       </div>
-      <div>
-        <img src="https://img.icons8.com/fluency/96/advertising.png" alt="إعلان" style="max-width:120px;">
+      <div class="card">
+        <h3>تصميم محتوى</h3>
+        <p>بوستات، فيديوهات قصيرة (Reels)، وإنفوجرافيك احترافي.</p>
       </div>
-    </section>
-    <section id="services">
-      <h2 style="color:var(--dark);">خدماتنا</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>تصميم جرافيكي</h3>
-          <p>تصميم شعارات، منشورات، هوية بصرية متكاملة تناسب علامتك التجارية.</p>
-        </div>
-        <div class="card">
-          <h3>حملات ممولة</h3>
-          <p>إطلاق وإدارة الحملات الإعلانية على منصات التواصل الاجتماعي.</p>
-        </div>
-        <div class="card">
-          <h3>إدارة سوشال ميديا</h3>
-          <p>إدارة حساباتك، جدولة المنشورات، وتحليل الأداء.</p>
-        </div>
-        <div class="card">
-          <h3>إنتاج محتوى</h3>
-          <p>كتابة وصناعة محتوى احترافي يحقق أهدافك التسويقية.</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section price-table">
+    <h2>خطط الأسعار</h2>
+    <table>
+      <thead>
+        <tr><th>الخطة</th><th>الوصف</th><th>السعر</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>بداية</td><td>5 بوستات + حملة 1 أسبوع</td><td>$50</td></tr>
+        <tr><td>شهرية</td><td>12 بوست + إدارة صفحة</td><td>$150</td></tr>
+        <tr><td>بريميوم</td><td>20 بوست + فيديو + حملات ممولة شهر كامل</td><td>$300</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Clients / Testimonials -->
+  <section id="clients" class="section testimonials">
+    <h2>ماذا يقول عملاؤنا</h2>
+    <div class="grid">
+      <div class="card">
+        <p>"زادت مبيعاتنا 3 أضعاف بعد الحملة التي أطلقها فريق Jehfani."</p>
+        <strong>- متجر إلكتروني</strong>
+      </div>
+      <div class="card">
+        <p>"إدارة ممتازة لحساباتنا على السوشيال وتحليل احترافي."</p>
+        <strong>- مطعم محلي</strong>
+      </div>
+      <div class="card">
+        <p>"أفضل وكالة تعاملنا معها من حيث السرعة والجودة."</p>
+        <strong>- شركة خدمات</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>اتصل بنا</h2>
+    <div class="grid">
+      <div class="card">
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+          <input type="text" name="Name" placeholder="اسمك" required>
+          <input type="email" name="Email" placeholder="بريدك الإلكتروني" required>
+          <textarea name="Message" rows="5" placeholder="رسالتك" required></textarea>
+          <button type="submit" class="btn btn-primary">إرسال</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>معلومات التواصل</h3>
+        <p><strong>الهاتف:</strong> +249 9XXXXXXXX</p>
+        <p><strong>البريد:</strong> info@jehfani.example</p>
+        <p><strong>العنوان:</strong> جوبا - جنوب السودان</p>
+        <div class="social">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="WhatsApp">wa</a>
         </div>
       </div>
-    </section>
-    <section id="contact" style="margin-top:38px;">
-      <h2 style="color:var(--dark);">تواصل معنا</h2>
-      <p>راسلنا عبر <a href="mailto:info@jehfni.com" style="color:var(--blue);">info@jehfni.com</a> أو واتساب <a href="https://wa.me/966500000000" style="color:var(--blue);">211921836905
-        +</a></p>
-    </section>
-    <footer>
-      جميع الحقوق محفوظة © جفني 2025
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> Jehfani — جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
