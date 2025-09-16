@@ -21,6 +21,7 @@
       background:var(--bg);
       color:var(--dark);
       line-height:1.5;
+      direction: rtl;
     }
     .container{max-width:1000px;margin:28px auto;padding:20px;}
     .brand{
@@ -45,4 +46,62 @@
       box-shadow:0 6px 16px rgba(11,99,216,0.15);
     }
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
-    .card{background:var(--card);padding:14px;border
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(20,33,61,0.06);}
+    .card h3{margin:0 0 8px;color:var(--blue);}
+    .card p{margin:0;color:var(--muted);}
+    footer{text-align:center;margin:32px 0 0;color:var(--muted);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">جفني</div>
+        <span style="font-weight:700;font-size:20px;">وكالة إعلانات</span>
+      </div>
+      <nav>
+        <a href="#services">الخدمات</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="info">
+        <h1>وكالة جفني للإعلانات</h1>
+        <p>نساعدك على النجاح الرقمي عبر حملات إعلانية مدفوعة، إدارة حسابات السوشال ميديا، تصميم احترافي وإنتاج محتوى.</p>
+        <a class="btn" href="#contact">ابدأ الآن</a>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/fluency/96/advertising.png" alt="إعلان" style="max-width:120px;">
+      </div>
+    </section>
+    <section id="services">
+      <h2 style="color:var(--dark);">خدماتنا</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>تصميم جرافيكي</h3>
+          <p>تصميم شعارات، منشورات، هوية بصرية متكاملة تناسب علامتك التجارية.</p>
+        </div>
+        <div class="card">
+          <h3>حملات ممولة</h3>
+          <p>إطلاق وإدارة الحملات الإعلانية على منصات التواصل الاجتماعي.</p>
+        </div>
+        <div class="card">
+          <h3>إدارة سوشال ميديا</h3>
+          <p>إدارة حساباتك، جدولة المنشورات، وتحليل الأداء.</p>
+        </div>
+        <div class="card">
+          <h3>إنتاج محتوى</h3>
+          <p>كتابة وصناعة محتوى احترافي يحقق أهدافك التسويقية.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" style="margin-top:38px;">
+      <h2 style="color:var(--dark);">تواصل معنا</h2>
+      <p>راسلنا عبر <a href="mailto:info@jehfni.com" style="color:var(--blue);">info@jehfni.com</a> أو واتساب <a href="https://wa.me/966500000000" style="color:var(--blue);">966500000000+</a></p>
+    </section>
+    <footer>
+      جميع الحقوق محفوظة © جفني 2025
+    </footer>
+  </div>
+</body>
+</html>
